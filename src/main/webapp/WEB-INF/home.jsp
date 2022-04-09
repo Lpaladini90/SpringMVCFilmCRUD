@@ -9,17 +9,12 @@
 <body>
 <h1>Film Site</h1>
 
-<a href="searchById.jsp">Search by ID</a>
+<a href="WEB-INF/searchById.jsp">Search by ID</a>
 
  <br>
- <a href="searchByKeyword.jsp">Search by keyword</a>
- <!-- <h3>Search Film with keyword</h3>
-  <form action="" method="GET">
- 	Keyword:
- 	<input type="text" name="keyword"/>
- 	<input type="submit" value="Search" />
- </form> -->
+ <a href="WEB-INF/searchByKeyword.jsp">Search by keyword</a>
+ 
  <br>
- <a href="createFilm.jsp">Add a film</a>
+ <a href="WEB-INF/createFilm.jsp">Add a film</a>
 </body>
 </html>
