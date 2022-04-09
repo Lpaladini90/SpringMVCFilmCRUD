@@ -50,15 +50,12 @@
 
 	<form action="editFilm.do" method="POST">
 		<input type="submit" name="editFilm" value="edit film" />
-		
 	</form>
 
 	<br>
 	<form action="deleteFilm.do" method="POST">
-	<input type="submit" name= "deletefilm" value="DELETE" />
-	<input type="hidden" name= "film" value="${film.id}" />
+		<input type="submit" name="deleteFilm" value="delete film" />
 	</form>
-	
 
 
 </body>
