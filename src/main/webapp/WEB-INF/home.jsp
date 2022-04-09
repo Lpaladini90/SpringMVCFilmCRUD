@@ -9,7 +9,7 @@
 <body>
 <h1>Film Site</h1>
 
-<a href="WEB-INF/searchById.jsp">Search by ID</a>
+<a href="src/main/webapp/WEB-INF/searchByID2.jsp">Search by ID</a>
 
  <br>
  <a href="WEB-INF/searchByKeyword.jsp">Search by keyword</a>
