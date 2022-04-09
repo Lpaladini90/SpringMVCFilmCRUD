@@ -72,11 +72,9 @@ public class FilmController {
 		ModelAndView mv = new ModelAndView();
 		List<Film> films = filmDao.findFilmBySearch(keyword);
 		mv.addObject("film", films);
-<<<<<<< HEAD
-		mv.setViewName("WEB-INF/result.jsp");
-=======
+
 		mv.setViewName("WEB-INF/filmListResult.jsp");
->>>>>>> 5ae11c46473d1ce8f596f3a167b2de71e96d450d
+
 		return mv;
 	}
 	

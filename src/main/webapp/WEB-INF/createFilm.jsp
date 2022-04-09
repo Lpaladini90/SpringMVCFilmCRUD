@@ -10,7 +10,7 @@
 <body>
 	<form action="createFilm.do" method="POST">
 
-		<label for="username">Title:</label>
+		<label for="title">Title:</label>
 		 <input type="text"name="createfilm" required>
 	   
 			 <br>
