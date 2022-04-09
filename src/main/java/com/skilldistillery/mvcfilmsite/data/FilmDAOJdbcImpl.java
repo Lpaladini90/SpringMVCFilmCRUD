@@ -321,18 +321,23 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 	
 		try {
 			conn = DriverManager.getConnection(URL, user, pass);
+			conn.setAutoCommit(false);
 			
-			String sql = "INSERT INTO film (title, description, language_id, rental_duration, "
-					   + " rental_rate, length, replacement_cost) VALUES (?, ?, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO film (title, description,release_year, language_id, rental_duration, "
+					   + " rental_rate, length, replacement_cost, rating, special_features) " 
+					   + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			
 			PreparedStatement prepStmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			prepStmt.setString(1, film.getTitle());
 			prepStmt.setString(2, film.getDescription());
-			prepStmt.setInt(3, film.getLaunguageId());
-			prepStmt.setInt(4, film.getRentalDuration());
-			prepStmt.setDouble(5, film.getRentalRate());
-			prepStmt.setInt(6, film.getLength());
-			prepStmt.setDouble(7, film.getReplacmentCost());
+			prepStmt.setInt(3, film.getReleaseYear());
+			prepStmt.setInt(4, film.getLaunguageId());
+			prepStmt.setInt(5, film.getRentalDuration());
+			prepStmt.setDouble(6, film.getRentalRate());
+			prepStmt.setInt(7, film.getLength());
+			prepStmt.setDouble(8, film.getReplacmentCost());
+			prepStmt.setString(9, film.getRating());
+			prepStmt.setString(10, film.getSpecialFeatures());
 			
 			
 			int updateCount = prepStmt.executeUpdate();
@@ -345,6 +350,8 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 					}
 					keys.close();
 				} 
+				
+			conn.commit();
 			prepStmt.close();
 			conn.close();
 			
