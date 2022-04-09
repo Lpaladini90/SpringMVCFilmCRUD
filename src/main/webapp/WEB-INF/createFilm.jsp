@@ -11,7 +11,11 @@
 	<form action="createFilm.do" method="POST">
 
 		<label for="title">Title:</label>
+<<<<<<< HEAD
+		 <input type="text"name="createfilm" required>
+=======
 		 <input type="text"name="title" required>
+>>>>>>> 0295eb77d948213c4e0911ba095cc949b582da64
 	   
 			 <br>
 			 <br>
