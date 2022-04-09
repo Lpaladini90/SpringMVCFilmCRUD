@@ -379,9 +379,11 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 			conn = DriverManager.getConnection(URL, user, pass);
 			conn.setAutoCommit(false);
 			
-			String sql = "UPDATE film SET title=?,  ";
+			String sql = "UPDATE film SET title=?, description=?, release_year=?, language_id =?,  "
+					     + " rental_duration=?, rental_rate=?, length=?, replacement_cost=?, "
+					     + " rating=?, special_features=? WHERE id=?";
 			
-			PreparedStatement prepStmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			PreparedStatement prepStmt = conn.prepareStatement(sql);
 			prepStmt.setString(1, film.getTitle());
 			prepStmt.setString(2, film.getDescription());
 			prepStmt.setInt(3, film.getReleaseYear());
@@ -392,20 +394,18 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 			prepStmt.setDouble(8, film.getReplacmentCost());
 			prepStmt.setString(9, film.getRating());
 			prepStmt.setString(10, film.getSpecialFeatures());
+			prepStmt.setInt(11, film.getId());
 			
 			
 			int updateCount = prepStmt.executeUpdate();
 			
 			if (updateCount == 1) {
-				ResultSet keys = prepStmt.getGeneratedKeys();
-				if (keys.next()) {
-					int newActorId = keys.getInt(1);
-					film.setId(newActorId);
-				}
-				keys.close();
-			} 
+				conn.commit();
+
+			} else {
+				film = null;
+			}
 			
-			conn.commit();
 			prepStmt.close();
 			conn.close();
 			
@@ -428,4 +428,3 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 	
 
 }
-
