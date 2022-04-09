@@ -9,10 +9,10 @@
 <body>
 <h1>Film Site</h1>
 
-<a href="searchById.jsp">Search by ID</a>
+<a href="idsearch.do">Search by ID</a>
 
  <br>
- <a href="searchByKeyword.jsp">Search by keyword</a>
+ <a href="kwsearch.do">Search by keyword</a>
  <!-- <h3>Search Film with keyword</h3>
   <form action="" method="GET">
  	Keyword:
@@ -20,6 +20,6 @@
  	<input type="submit" value="Search" />
  </form> -->
  <br>
- <a href="createFilm.jsp">Add a film</a>
+ <a href="cf.do">Add a film</a>
 </body>
 </html>

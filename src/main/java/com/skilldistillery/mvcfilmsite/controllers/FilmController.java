@@ -17,19 +17,49 @@ public class FilmController {
 	@Autowired
 	private FilmDAO filmDao;
 	
+	
+	
 	@RequestMapping(path = {"/", "home.do"})
 	public String home() {
 		return "WEB-INF/home.jsp";
 		
 		
 	}
+	
+	@RequestMapping(path = {"/", "idsearch.do"})
+	public String idSearch() {
+		return "WEB-INF/searchById.jsp";
+		
+		
+	}
+	
+	@RequestMapping(path = {"/", "kwsearch.do"})
+	public String keywordSearch() {
+		return "WEB-INF/searchByKeyword.jsp";
+		
+		
+	}
+	
+	@RequestMapping(path = {"/", "result.do"})
+	public String result() {
+		return "WEB-INF/result.jsp";
+		
+		
+	}
+	
+	@RequestMapping(path = {"/", "cf.do"})
+	public String createFilm() {
+		return "WEB-INF/createFilm.jsp";
+		
+		
+	}
 	    
 	
-	@RequestMapping(path = "findFilmById.do", params = "filmid", method = RequestMethod.GET)
-	public ModelAndView findFilmById(int id) {
+	@RequestMapping(path = "findFilmById.do", params = "ID", method = RequestMethod.GET)
+	public ModelAndView findFilmById(int ID) {
 		ModelAndView mv = new ModelAndView();
-		Film f= filmDao.findFilmById(id);
-		mv.addObject("filmid", f);
+		Film f= filmDao.findFilmById(ID);
+		mv.addObject("film", f);
 		mv.setViewName("WEB-INF/searchById.jsp");
 	
 		return mv;
