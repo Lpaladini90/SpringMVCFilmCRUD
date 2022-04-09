@@ -11,7 +11,9 @@
 
 <h3>Search Film with keyword</h3>
 
+
   <form action="searchByKeyWord.do" method="GET">
+
 
  	Keyword:
  	<input type="text" name="keyword"/>
