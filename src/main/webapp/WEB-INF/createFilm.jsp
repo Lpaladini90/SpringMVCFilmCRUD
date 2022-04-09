@@ -31,7 +31,7 @@
  			  <br>
 			 <br> 
 			<label for="language">Language:</label>
-			 <input type="text"  name="createfilm" required>
+			 <input type="text"  name="language" required>
 			 
 			  <br>
 			 <br>  
@@ -65,7 +65,7 @@
 			
 			  
 			<label for="category">Category:</label>
-			 <input type="text"  name="createfilm" required>
+			 <input type="text"  name="category" required>
 			  <br>
 			 <br>
 			 <input type="submit"/>
