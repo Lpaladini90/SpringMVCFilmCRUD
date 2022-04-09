@@ -8,17 +8,18 @@
 </head>
 <body>
 <h1>Film Site</h1>
-<h3>Search Film with ID</h3>
-  <form action="" method="GET">
- 	ID:
- 	<input type="text" name="ID"/>
- 	<input type="submit" value="Search" />
- </form>
- <h3>Search Film with keyword</h3>
+
+<a href="searchById.jsp">Search by ID</a>
+
+ <br>
+ <a href="searchByKeyword.jsp">Search by keyword</a>
+ <!-- <h3>Search Film with keyword</h3>
   <form action="" method="GET">
  	Keyword:
  	<input type="text" name="keyword"/>
  	<input type="submit" value="Search" />
- </form>
+ </form> -->
+ <br>
+ <a href="createFilm.jsp">Add a film</a>
 </body>
 </html>

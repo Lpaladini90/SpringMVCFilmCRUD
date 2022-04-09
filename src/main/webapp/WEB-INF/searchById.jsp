@@ -8,8 +8,15 @@
 <title>Find movie by ID</title>
 </head>
 <body>
+
+<h3>Search Film with ID</h3>
+  <form action="" method="GET">
+ 	ID:
+ 	<input type="text" name="ID"/>
+ 	<input type="submit" value="Search" />
+ </form>
 	
-	 Film ID: <c:out value="${id}" />
+	<%--  Film ID: <c:out value="${id}" />
 			<br>
      Title: <c:out value="${title}" />
 			<br>
@@ -47,7 +54,7 @@
 	<br>
 	<form action="" method="POST">
 	<input type="submit" name= "delete film" value="delete film" />
-	</form>
+	</form> --%>
 	
 	
 </body>
