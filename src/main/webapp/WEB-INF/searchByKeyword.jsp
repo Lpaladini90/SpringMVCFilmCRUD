@@ -10,7 +10,7 @@
 <body>
 
 <h3>Search Film with keyword</h3>
-  <form action="" method="GET">
+  <form action="searchByKeyWord.do" method="GET">
  	Keyword:
  	<input type="text" name="keyword"/>
  	<input type="submit" value="Search" />

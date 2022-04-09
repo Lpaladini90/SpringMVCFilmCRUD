@@ -40,7 +40,7 @@ public class FilmController {
 		ModelAndView mv = new ModelAndView();
 		List<Film> films = filmDao.findFilmBySearch(choice);
 		mv.addObject("filmsearch", films);
-		mv.setViewName("WEB-INF/searchByKeyword.jsp");
+		mv.setViewName("/searchByKeyword.jsp");
 		return mv;
 	}
 	
@@ -50,7 +50,7 @@ public class FilmController {
 		ModelAndView mv = new ModelAndView();
 		Film newFilm= filmDao.createFilm(film);
 		mv.addObject("createfilm", newFilm);
-		mv.setViewName("WEB-INF/createFilm.jsp");
+		mv.setViewName("/createFilm.jsp");
 		
 		return mv;
 		
