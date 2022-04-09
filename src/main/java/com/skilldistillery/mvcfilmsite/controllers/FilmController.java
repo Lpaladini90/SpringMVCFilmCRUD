@@ -61,7 +61,6 @@ public class FilmController {
 		Film f= filmDao.findFilmById(ID);
 		mv.addObject("film", f);
 		mv.setViewName("WEB-INF/searchById.jsp");
-	
 		return mv;
 	}
 	

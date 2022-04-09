@@ -12,4 +12,5 @@ public interface FilmDAO {
 	  public List<Film> findFilmBySearch(String choice);
 	  public Film createFilm(Film film);
 	  public Film editFilm(Film film);
+	  public Film deleteFilm(Film film);
 }
