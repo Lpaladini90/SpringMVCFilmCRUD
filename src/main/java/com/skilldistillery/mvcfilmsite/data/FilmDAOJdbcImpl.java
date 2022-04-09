@@ -370,5 +370,61 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		
 		return film;
 	}
+	
+	@Override
+	public Film editFilm(Film film) {
+		Connection conn = null;
+		
+		try {
+			conn = DriverManager.getConnection(URL, user, pass);
+			conn.setAutoCommit(false);
+			
+			String sql = "UPDATE film SET title=?,  ";
+			
+			PreparedStatement prepStmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			prepStmt.setString(1, film.getTitle());
+			prepStmt.setString(2, film.getDescription());
+			prepStmt.setInt(3, film.getReleaseYear());
+			prepStmt.setInt(4, film.getLaunguageId());
+			prepStmt.setInt(5, film.getRentalDuration());
+			prepStmt.setDouble(6, film.getRentalRate());
+			prepStmt.setInt(7, film.getLength());
+			prepStmt.setDouble(8, film.getReplacmentCost());
+			prepStmt.setString(9, film.getRating());
+			prepStmt.setString(10, film.getSpecialFeatures());
+			
+			
+			int updateCount = prepStmt.executeUpdate();
+			
+			if (updateCount == 1) {
+				ResultSet keys = prepStmt.getGeneratedKeys();
+				if (keys.next()) {
+					int newActorId = keys.getInt(1);
+					film.setId(newActorId);
+				}
+				keys.close();
+			} 
+			
+			conn.commit();
+			prepStmt.close();
+			conn.close();
+			
+		} catch (SQLException sqle) {
+			sqle.printStackTrace();
+			film = null; 
+			if (conn != null) {
+				try {
+					conn.rollback();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		
+		return film;
+	}
+	
+	
 
 }
