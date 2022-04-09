@@ -10,31 +10,31 @@
 <body>
 	<h3>Results</h3>
 	Film ID:
-	<c:out value="${filmid.id}" />
+	<c:out value="${film.id}" />
 	<br> Title:
-	<c:out value="${filmid.title}" />
+	<c:out value="${film.title}" />
 	<br> Description:
-	<c:out value="${description}" />
+	<c:out value="${film.description}" />
 	<br> Release Year:
-	<c:out value="${releaseYear}" />
+	<c:out value="${film.releaseYear}" />
 	<br> Language ID:
-	<c:out value="${languageId}" />
+	<c:out value="${film.idlanguageId}" />
 	<br> Language:
-	<c:out value="${language}" />
+	<c:out value="${film.language}" />
 	<br> Rental Rate:
-	<c:out value="${rentalRate}" />
+	<c:out value="${film.rentalRate}" />
 	<br> Rental Duration:
-	<c:out value="${rentalDuration}" />
+	<c:out value="${film.rentalDuration}" />
 	<br> Length:
-	<c:out value="${length}" />
+	<c:out value="${film.length}" />
 	<br> Replacement Cost:
-	<c:out value="${replacementCost}" />
+	<c:out value="${film.replacementCost}" />
 	<br> Rating:
-	<c:out value="${rating}" />
+	<c:out value="${film.idrating}" />
 	<br> Special Features:
-	<c:out value="${specialFeatures}" />
+	<c:out value="${film.specialFeatures}" />
 	<br> Category:
-	<c:out value="${category}" />
+	<c:out value="${film.category}" />
 	<br> Actors:
 	<br>
 	<c:forEach items="${actorList}" var="actor">
