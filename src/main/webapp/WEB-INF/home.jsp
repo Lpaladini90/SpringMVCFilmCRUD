@@ -9,15 +9,6 @@
 <body>
 <h1>Film Site</h1>
 
-<<<<<<< HEAD
-<a href="src/main/webapp/WEB-INF/searchByID2.jsp">Search by ID</a>
-
- <br>
- <a href="WEB-INF/searchByKeyword.jsp">Search by keyword</a>
- 
- <br>
- <a href="WEB-INF/createFilm.jsp">Add a film</a>
-=======
 <a href="idsearch.do">Search by ID</a>
 
  <br>
@@ -30,6 +21,5 @@
  </form> -->
  <br>
  <a href="cf.do">Add a film</a>
->>>>>>> 1f449a0401c5c72b15c90cdd220baa4d7d72d767
 </body>
 </html>
