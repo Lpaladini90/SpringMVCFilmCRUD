@@ -8,71 +8,68 @@
 <title>Created Film</title>
 </head>
 <body>
-	<form action="createFilm.do" method="GET">
+	<form action="createFilm.do" method="POST">
 
 		<label for="username">Title:</label>
-		 <input type="text" id="username" name="username" required>
-	     <input type="submit">
+		 <input type="text"name="createfilm" required>
+	   
 			 <br>
 			 <br>
-		<label for="username">Description:</label>
-		 <input type="text" id="username" name="createfilm">
-		 <input type="submit">
+		<label for="description">Description:</label>
+		 <input type="text"  name="createfilm">
+		
 			 <br>
 			 <br> 
-			<label for="username">Release Year:</label>
-			 <input type="text" id="username" name="createfilm">
-			 <input type="submit">
+			<label for="releaseYear">Release Year:</label>
+			 <input type="text"  name="createfilm">
+			
 			 <br>
 			 <br>
-			 <label for="username">LanguageID:</label>
-  			 <input type="text" id="username" name="createfilm" required>
- 			 <input type="submit">
+			 <label for="launguageId">LanguageID:</label>
+  			 <input type="text" name="createfilm" required>
+ 			 
  			  <br>
 			 <br> 
-			<label for="username">Language:</label>
-			 <input type="text" id="username" name="createfilm" required>
-			 <input type="submit">
+			<label for="language">Language:</label>
+			 <input type="text"  name="createfilm" required>
+			 
 			  <br>
 			 <br> 
-			<label for="username">Rental Rate:</label>
-			 <input type="text" id="username" name="createfilm" required>
-			 <input type="submit">
+			<label for="rentalRate">Rental Rate:</label>
+			 <input type="text"  name="createfilm" required>
+			
 			  <br>
 			 <br> 
-			<label for="username">Rental Duration:</label>
-			 <input type="text" id="username" name="createfilm" required>
-			 <input type="submit">
+			<label for="rentalDuration">Rental Duration:</label>
+			 <input type="text"  name="createfilm" required>
+			
 			  <br>
 			 <br> 
-			<label for="username">Length:</label>
-			 <input type="text" id="username" name="createfilm">
-			 <input type="submit">
+			<label for="length">Length:</label>
+			 <input type="text"  name="createfilm">
+			
 			  <br>
 			 <br>
-			<label for="username">Replacement Cost:</label>
-			 <input type="text" id="username" name="createfilm" required>
-			 <input type="submit">
+			<label for="replacmentCost">Replacement Cost:</label>
+			 <input type="text"  name="createfilm" required>
+			
 			 <br>
 			 <br>
-			<label for="username">Rating:</label>
-			 <input type="text" id="username" name="createfilm">
-			 <input type="submit">
+			<label for="rating">Rating:</label>
+			 <input type="text"  name="createfilm">
+			
 			  <br>
 			 <br> 
-			<label for="username">Special Features:</label>
-			 <input type="text" id="username" name="createfilm">
-			 <input type="submit">
+			<label for="specialFeatures">Special Features:</label>
+			 <input type="text" name="createfilm">
+			
 			  <br>
 			 <br>
-			<label for="username">Category:</label>
-			 <input type="text" id="username" name="createfilm" required>
-			 <input type="submit">
+			<label for="category">Category:</label>
+			 <input type="text"  name="createfilm" required>
 			  <br>
 			 <br>
-			<label for="username">Release Year:</label>
-			 <input type="text" id="username" name="createfilm" required>
-			 <input type="submit">
+			 <input type="submit"/>
 
 	</form>
 

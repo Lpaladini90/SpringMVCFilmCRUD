@@ -71,7 +71,7 @@ public class FilmController {
 	public ModelAndView findFilmBySearch(String keyword) {
 		ModelAndView mv = new ModelAndView();
 		List<Film> films = filmDao.findFilmBySearch(keyword);
-		mv.addObject("film", films.get(1));
+		mv.addObject("film", films);
 		mv.setViewName("WEB-INF/result.jsp");
 		return mv;
 	}
@@ -88,9 +88,9 @@ public class FilmController {
 		
 	}
 	@RequestMapping(path = "editFilm.do", params = "editFilm", method = RequestMethod.POST)
-	public ModelAndView editFilm(Film editFilm) {
+	public ModelAndView editFilm(Film editfilm) {
 		ModelAndView mv = new ModelAndView();
-		Film newFilm= filmDao.createFilm(editFilm);
+		Film newFilm= filmDao.createFilm(editfilm);
 		mv.addObject("film", newFilm);
 		mv.setViewName("WEB-INF/result.jsp");
 		return mv; 
