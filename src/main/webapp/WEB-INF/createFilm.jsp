@@ -1,49 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Created Film</title>
 </head>
 <body>
-	Film ID:
-	<c:out value="${id}" />
-	<br> Title:
-	<c:out value="${title}" />
-	<br> Description:
-	<c:out value="${description}" />
-	<br> Release Year:
-	<c:out value="${releaseYear}" />
-	<br> Language ID:
-	<c:out value="${languageId}" />
-	<br> Language:
-	<c:out value="${language}" />
-	<br> Rental Rate:
-	<c:out value="${rentalRate}" />
-	<br> Rental Duration:
-	<c:out value="${rentalDuration}" />
-	<br> Length:
-	<c:out value="${length}" />
-	<br> Replacement Cost:
-	<c:out value="${replacementCost}" />
-	<br> Rating:
-	<c:out value="${rating}" />
-	<br> Special Features:
-	<c:out value="${specialFeatures}" />
-	<br> Category:
-	<c:out value="${category}" />
-	
+	<form action="createFilm.do" method="GET">
 
-	<form action="" method="POST">
-		<input type="submit" name="edit film" value="edit film" />
+		<label for="username">Title:</label> <input type="text" id="username"
+			name="username" required> <input type="submit"> 
+			<br>
+		<label for="username">Description:</label> <input type="text"
+			id="username" name="username"> <input type="submit">
+		   <br>
+	   <label for="username">Release Year:</label>
+  <input type="text" id="username" name="username" required>
+  <input type="submit">
+  		<br>
 	</form>
 
-	<br>
-	<form action="" method="POST">
-		<input type="submit" name="delete film" value="delete film" />
-	</form>
 
 </body>
 </html>
