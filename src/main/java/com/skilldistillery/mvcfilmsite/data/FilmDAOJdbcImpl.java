@@ -340,7 +340,6 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 			prepStmt.setString(9, film.getRating());
 			prepStmt.setString(10, film.getSpecialFeatures());
 			
-			
 			int updateCount = prepStmt.executeUpdate();
 			
 				if (updateCount == 1) {
@@ -351,7 +350,6 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 					}
 					keys.close();
 				} 
-				
 			conn.commit();
 			prepStmt.close();
 			conn.close();
@@ -367,7 +365,6 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 				}
 			}
 		}
-		
 		
 		return film;
 	}

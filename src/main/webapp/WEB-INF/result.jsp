@@ -9,8 +9,9 @@
 </head>
 <body>
 	<h3>Results</h3>
-	Film ID:
-	<c:out value="${film.id}" />
+	<p>Film ID:
+	</p>
+	<c:out value="${ film.id }" />
 	<br> Title:
 	<c:out value="${film.title}" />
 	<br> Description:
@@ -42,13 +43,13 @@
 				<br>
 	</c:forEach>
 
-	<form action="" method="POST">
-		<input type="submit" name="edit film" value="edit film" />
+	<form action="editFilm.do" method="POST">
+		<input type="submit" name="editFilm" value="edit film" />
 	</form>
 
 	<br>
-	<form action="" method="POST">
-		<input type="submit" name="delete film" value="delete film" />
+	<form action="deleteFilm.do" method="POST">
+		<input type="submit" name="deleteFilm" value="delete film" />
 	</form>
 
 
