@@ -18,7 +18,7 @@
 	<br> Release Year:
 	<c:out value="${film.releaseYear}" />
 	<br> Language ID:
-	<c:out value="${film.idlanguageId}" />
+	<c:out value="${film.launguageId}" />
 	<br> Language:
 	<c:out value="${film.language}" />
 	<br> Rental Rate:
@@ -28,9 +28,9 @@
 	<br> Length:
 	<c:out value="${film.length}" />
 	<br> Replacement Cost:
-	<c:out value="${film.replacementCost}" />
+	<c:out value="${film.replacmentCost}" />
 	<br> Rating:
-	<c:out value="${film.idrating}" />
+	<c:out value="${film.rating}" />
 	<br> Special Features:
 	<c:out value="${film.specialFeatures}" />
 	<br> Category:
