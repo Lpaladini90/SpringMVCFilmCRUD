@@ -9,6 +9,8 @@
 </head>
 <body>
 	<h3>Results</h3>
+
+	
 	<p>Film ID:
 	</p>
 	<c:out value="${ film.id }" />
@@ -38,10 +40,13 @@
 	<c:out value="${film.category}" />
 	<br> Actors:
 	<br>
-	<c:forEach items="${actorList}" var="actor">
-				${firstName } ${lastName }
+	<ul>
+	<c:forEach items="${film.actorList}" var="actor">
+				<li>${actor.firstName } ${actor.lastName } </li>
 				<br>
 	</c:forEach>
+	</ul>
+
 
 	<form action="editFilm.do" method="POST">
 		<input type="submit" name="editFilm" value="edit film" />
