@@ -231,6 +231,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		return filmList; 
 	}
 	
+	
 	public String findCategory(int id) {
 		String category = null;
 		Connection conn = null;
@@ -402,6 +403,48 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 			if (updateCount == 1) {
 				conn.commit();
 
+			} else {
+				film = null;
+			}
+			
+			prepStmt.close();
+			conn.close();
+			
+		} catch (SQLException sqle) {
+			sqle.printStackTrace();
+			film = null; 
+			if (conn != null) {
+				try {
+					conn.rollback();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		
+		return film;
+	}
+	
+	@Override
+	public Film deleteFilm(Film film) {
+		Connection conn = null;
+		
+		try {
+			conn = DriverManager.getConnection(URL, user, pass);
+			conn.setAutoCommit(false);
+			
+			String sql = "DELETE FROM film WHERE id=?";
+			
+			PreparedStatement prepStmt = conn.prepareStatement(sql);
+			prepStmt.setInt(1, film.getId());
+			
+			
+			int updateCount = prepStmt.executeUpdate();
+			
+			if (updateCount == 1) {
+				conn.commit();
+				
 			} else {
 				film = null;
 			}
