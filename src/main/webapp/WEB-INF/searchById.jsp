@@ -10,7 +10,7 @@
 <body>
 
 <h3>Search Film with ID</h3>
-  <form action="" method="GET">
+  <form action="findFilmById.do" method="GET">
  	ID:
  	<input type="text" name="ID"/>
  	<input type="submit" value="Search" />

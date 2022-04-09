@@ -23,6 +23,34 @@ public class FilmController {
 		
 		
 	}
+	
+	@RequestMapping(path = {"/", "idsearch.do"})
+	public String idSearch() {
+		return "WEB-INF/searchById.jsp";
+		
+		
+	}
+	
+	@RequestMapping(path = {"/", "kwsearch.do"})
+	public String keywordSearch() {
+		return "WEB-INF/searcgById.jsp";
+		
+		
+	}
+	
+	@RequestMapping(path = {"/", "result.do"})
+	public String result() {
+		return "WEB-INF/result.jsp";
+		
+		
+	}
+	
+	@RequestMapping(path = {"/", "cf.do"})
+	public String createFilm() {
+		return "WEB-INF/createFilm.jsp";
+		
+		
+	}
 	    
 	
 	@RequestMapping(path = "findFilmById.do", params = "filmid", method = RequestMethod.GET)
