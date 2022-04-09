@@ -10,9 +10,9 @@
 <body>
 	<h3>Results</h3>
 	Film ID:
-	<c:out value="${id}" />
+	<c:out value="${filmid.id}" />
 	<br> Title:
-	<c:out value="${title}" />
+	<c:out value="${filmid.title}" />
 	<br> Description:
 	<c:out value="${description}" />
 	<br> Release Year:
