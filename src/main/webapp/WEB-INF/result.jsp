@@ -9,10 +9,9 @@
 </head>
 <body>
 	<h3>Results</h3>
-
-	
-	<p>Film ID:
-	</p>
+	<c:choose>
+<c:when test="${not empty film.id}" >
+		 Film ID:
 	<c:out value="${ film.id }" />
 	<br> Title:
 	<c:out value="${film.title}" />
@@ -48,18 +47,31 @@
 	</ul>
 
 
-	<form action="editFilm.do" method="POST">
-		<input type="submit" name="editFilm" value="edit film" />
-		
-	</form>
+	
+	<form action="editFilmById.do" method="GET">
+ 	<button name="ID" type="submit" value="${film.id}">Edit Film</button>
+ 	
+ </form>
+ 
+ 
+	<%-- <a href="editFilm.do?Id=${film.id}"> Edit Film Id:"${film.id}"</a>
+	 --%>
+
+
 
 	<br>
 	<form action="deleteFilm.do" method="POST">
-	<input type="submit" name= "deletefilm" value="DELETE" />
-	<input type="hidden" name= "film" value="${film.id}" />
+	<button name="id" type="submit" value="${film.id}">DELETE</button>
 	</form>
+	</c:when>
 	
-
-
+	
+	
+	<c:otherwise>
+	<p>Film not found or was deleted.</p>
+	</c:otherwise>
+    </c:choose>
+    
+    <a href="home.do" ><button name="home" type="submit">Home</button></a>
 </body>
 </html>

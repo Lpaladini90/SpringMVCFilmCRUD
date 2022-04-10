@@ -17,14 +17,15 @@
 		</c:when>
 		<c:otherwise>
 		 --%>
-			<ul>
+			<ol>
 
 				<c:forEach var="f" items="${film}">
 					<li><a href="findFilmById.do?ID=${f.id}">${f.title} </a></li>
 				</c:forEach>
 
-			</ul>
+			</ol>
 		<%-- </c:otherwise> --%>
 		<%-- </c:choose> --%>
+		<a href="home.do" ><button name="home" type="submit">Home</button></a>
 </body>
 </html>

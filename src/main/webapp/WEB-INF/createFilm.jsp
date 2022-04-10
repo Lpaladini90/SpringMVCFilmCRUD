@@ -11,22 +11,17 @@
 	<form action="createFilm.do" method="POST">
 
 		<label for="title">Title:</label>
-<<<<<<< HEAD
-		 <input type="text"name="createfilm" required>
-=======
 		 <input type="text"name="title" required>
->>>>>>> 0295eb77d948213c4e0911ba095cc949b582da64
-	   
+
 			 <br>
 			 <br>
 		<label for="description">Description:</label>
 		 <input type="text"  name="description">
-		
+
 			 <br>
 			 <br> 
 			<label for="releaseYear">Release Year:</label>
 			 <input type="text"  name="releaseYear">
-			
 			 <br>
 			 <br>
 			 <label for="launguageId">LanguageID:</label>
@@ -76,6 +71,6 @@
 
 	</form>
 
-
+<a href="home.do" ><button name="home" type="submit">Home</button></a>
 </body>
 </html>

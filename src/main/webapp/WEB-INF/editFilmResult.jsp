@@ -5,13 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Result</title>
+<title>Edit</title>
 </head>
 <body>
-	
-	<h1>Film was created</h1>
-	<a href="home.do" ><button name="home" type="submit">Home</button></a>
 
+	<h1>Film was edited</h1>
+	<a href="home.do" ><button name="home" type="submit">Home</button></a>
 
 </body>
 </html>

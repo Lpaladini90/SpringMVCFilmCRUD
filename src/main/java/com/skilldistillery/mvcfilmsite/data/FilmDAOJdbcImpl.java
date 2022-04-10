@@ -338,7 +338,6 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 			int updateCount = prepStmt.executeUpdate();
 			
 			if (updateCount == 1) {
-				System.out.println("update count is: " + updateCount);
 				ResultSet keys = prepStmt.getGeneratedKeys();
 				if (keys.next()) {
 					int newActorId = keys.getInt(1);
@@ -368,7 +367,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 	}
 
 	@Override
-	public Film editFilm(Film film) {
+	public Film editFilm(Film film, int filmId) {
 		Connection conn = null;
 
 		try {
@@ -378,7 +377,6 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 			String sql = "UPDATE film SET title=?, description=?, release_year=?, language_id =?,  "
 					+ " rental_duration=?, rental_rate=?, length=?, replacement_cost=?, "
 					+ " rating=?, special_features=? WHERE id=?";
-
 			PreparedStatement prepStmt = conn.prepareStatement(sql);
 			prepStmt.setString(1, film.getTitle());
 			prepStmt.setString(2, film.getDescription());
@@ -390,11 +388,12 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 			prepStmt.setDouble(8, film.getReplacmentCost());
 			prepStmt.setString(9, film.getRating());
 			prepStmt.setString(10, film.getSpecialFeatures());
-			prepStmt.setInt(11, film.getId());
+			prepStmt.setInt(11, filmId);
 
 			int updateCount = prepStmt.executeUpdate();
 
 			if (updateCount == 1) {
+				
 				conn.commit();
 
 			} else {
