@@ -10,7 +10,7 @@
 <body>
 
 	<h1>Film was edited</h1>
-	<a href="home.do">Return Home</a>
+	<a href="home.do" ><button name="home" type="submit">Home</button></a>
 
 </body>
 </html>

@@ -57,6 +57,6 @@
 	<input type="submit" name= "delete film" value="delete film" />
 	</form> --%>
 	
-	
+	<a href="home.do" ><button name="home" type="submit">Home</button></a>
 </body>
 </html>

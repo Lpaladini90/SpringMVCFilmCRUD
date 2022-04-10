@@ -12,19 +12,12 @@
 
 		<label for="title">Title:</label>
 		 <input type="text"name="title" required>
-<<<<<<< HEAD
+
 			 <br>
 			 <br>
 		<label for="description">Description:</label>
 		 <input type="text"  name="description">
-=======
-	   
-			 <br>
-			 <br>
-		<label for="description">Description:</label>
-		 <input type="text"  name="description" required>
-		
->>>>>>> 47b4db344d5bf57347f9e76310b7f0f97598f961
+
 			 <br>
 			 <br> 
 			<label for="releaseYear">Release Year:</label>
@@ -78,6 +71,6 @@
 
 	</form>
 
-
+<a href="home.do" ><button name="home" type="submit">Home</button></a>
 </body>
 </html>

@@ -46,24 +46,18 @@
 	</c:forEach>
 	</ul>
 
-<<<<<<< HEAD
+
 	
 	<form action="editFilmById.do" method="GET">
- 	ID:
- 	<input type="text" name="ID"/>
- 	<input type="submit" value="Edit" />
+ 	<button name="ID" type="submit" value="${film.id}">Edit Film</button>
  	
  </form>
  
  
 	<%-- <a href="editFilm.do?Id=${film.id}"> Edit Film Id:"${film.id}"</a>
 	 --%>
-=======
 
-	<form action="editFilm.do" method="POST">
-		<input type="submit" name="editFilm" value="edit film" />
-	</form>
->>>>>>> 47b4db344d5bf57347f9e76310b7f0f97598f961
+
 
 	<br>
 	<form action="deleteFilm.do" method="POST">
@@ -71,9 +65,13 @@
 	</form>
 	</c:when>
 	
+	
+	
 	<c:otherwise>
 	<p>Film not found or was deleted.</p>
 	</c:otherwise>
     </c:choose>
+    
+    <a href="home.do" ><button name="home" type="submit">Home</button></a>
 </body>
 </html>

@@ -5,12 +5,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.skilldistillery.mvcfilmsite.data.FilmDAO;
 import com.skilldistillery.mvcfilmsite.entities.Film;
@@ -96,19 +93,18 @@ public class FilmController {
 	}
 
 	@RequestMapping(path = "editFilm.do", method = RequestMethod.POST)
-	public ModelAndView editFilm(Film editFilm) {
+	public ModelAndView editFilm(Film film,int ID) {
+		
 		ModelAndView mv = new ModelAndView();
-		System.out.println(editFilm);
-		Film updateFilm = editFilm;
-		System.out.println(updateFilm);
-
+		
+		filmDao.editFilm(film, ID);
+		
 		mv.setViewName("WEB-INF/editFilmResult.jsp");
 		return mv;
 	}
 
 	@RequestMapping(path = "deleteFilm.do", method = RequestMethod.POST)
 	public ModelAndView deleteFilm(Film film) {
-		System.out.println(film);
 		ModelAndView mv = new ModelAndView();
 		filmDao.deleteFilm(film);	
 		mv.setViewName("WEB-INF/Delete.jsp");
