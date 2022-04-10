@@ -71,7 +71,6 @@ public class FilmController {
 		ModelAndView mv = new ModelAndView();
 		List<Film> films = filmDao.findFilmBySearch(keyword);
 		mv.addObject("film", films);
-
 		mv.setViewName("WEB-INF/filmListResult.jsp");
 		return mv;
 	}
@@ -108,11 +107,11 @@ public class FilmController {
 	}
 
 	@RequestMapping(path = "deleteFilm.do", method = RequestMethod.POST)
-	public ModelAndView deleteFilm(Film deleteFilm) {
+	public ModelAndView deleteFilm(Film film) {
+		System.out.println(film);
 		ModelAndView mv = new ModelAndView();
-		Film newFilm = filmDao.createFilm(deleteFilm);
-		mv.addObject("film", newFilm);
-		mv.setViewName("WEB-INF/result.jsp");
+		filmDao.deleteFilm(film);	
+		mv.setViewName("WEB-INF/Delete.jsp");
 		return mv;
 
 	}
