@@ -16,7 +16,7 @@
 			 <br>
 			 <br>
 		<label for="description">Description:</label>
-		 <input type="text"  name="description">
+		 <input type="text"  name="description" required>
 		
 			 <br>
 			 <br> 

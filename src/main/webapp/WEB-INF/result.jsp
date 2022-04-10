@@ -9,10 +9,9 @@
 </head>
 <body>
 	<h3>Results</h3>
-
-	
-	<p>Film ID:
-	</p>
+	<c:choose>
+<c:when test="${not empty film.id}" >
+		 Film ID:
 	<c:out value="${ film.id }" />
 	<br> Title:
 	<c:out value="${film.title}" />
@@ -54,9 +53,13 @@
 
 	<br>
 	<form action="deleteFilm.do" method="POST">
-		<input type="submit" name="deleteFilm" value="delete film" />
+	<button name="id" type="submit" value="${film.id}">DELETE</button>
 	</form>
-
-
+	</c:when>
+	
+	<c:otherwise>
+	<p>Film not found or was deleted.</p>
+	</c:otherwise>
+    </c:choose>
 </body>
 </html>
