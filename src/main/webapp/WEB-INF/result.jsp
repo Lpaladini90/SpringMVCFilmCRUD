@@ -47,11 +47,17 @@
 	</c:forEach>
 	</ul>
 
-
-	<form action="editFilm.do" method="POST">
-		<input type="submit" name="editFilm" value="edit film" />
-		
-	</form>
+	
+	<form action="editFilmById.do" method="GET">
+ 	ID:
+ 	<input type="text" name="ID"/>
+ 	<input type="submit" value="Edit" />
+ 	
+ </form>
+ 
+ 
+	<%-- <a href="editFilm.do?Id=${film.id}"> Edit Film Id:"${film.id}"</a>
+	 --%>
 
 	<br>
 	<form action="deleteFilm.do" method="POST">

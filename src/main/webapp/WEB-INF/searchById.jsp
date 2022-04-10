@@ -14,6 +14,7 @@
  	ID:
  	<input type="text" name="ID"/>
  	<input type="submit" value="Search" />
+ 	
  </form>
 	
 	<%--  Film ID: <c:out value="${id}" />

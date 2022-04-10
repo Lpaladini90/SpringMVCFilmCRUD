@@ -378,7 +378,6 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 			String sql = "UPDATE film SET title=?, description=?, release_year=?, language_id =?,  "
 					+ " rental_duration=?, rental_rate=?, length=?, replacement_cost=?, "
 					+ " rating=?, special_features=? WHERE id=?";
-
 			PreparedStatement prepStmt = conn.prepareStatement(sql);
 			prepStmt.setString(1, film.getTitle());
 			prepStmt.setString(2, film.getDescription());
@@ -391,10 +390,13 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 			prepStmt.setString(9, film.getRating());
 			prepStmt.setString(10, film.getSpecialFeatures());
 			prepStmt.setInt(11, film.getId());
+			
 
 			int updateCount = prepStmt.executeUpdate();
 
 			if (updateCount == 1) {
+				System.out.println(sql);
+				System.out.println("updateCount: " + updateCount);
 				conn.commit();
 
 			} else {
