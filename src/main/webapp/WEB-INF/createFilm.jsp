@@ -75,7 +75,8 @@
 
 	</form>
 	
-	<br>
+	<br> 
+	
 	<a href="home.do" ><button name="home" type="submit">Home</button></a>
 </body>
 </html>

@@ -86,6 +86,7 @@
 			 <br>
 			 <input type="submit"/>
 	</form>
-<a href="home.do" ><button name="home" type="submit">Home</button></a>
+	
+	<a href="home.do" ><button name="home" type="submit">Home</button></a>
 </body> 
 </html>
