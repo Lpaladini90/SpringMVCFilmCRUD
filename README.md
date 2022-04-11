@@ -8,14 +8,16 @@ what are we trying to accomplish with this app
 how is the app built
 ### Tech Used
 
-## What I learned
+### What I learned
 
 - Lucas Paladini
-        - Test
-            - Test
+  - words go khdfg
 
+    - kjhgkuhdjfg
 
+      - jdhfgkj
 
+        - dfjgh
 - Austin Breckenfelder
           - Test
 
