@@ -5,73 +5,86 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Result</title>
+<title>Find Film by Id Results</title>
 </head>
 <body>
-	<h3>Results</h3>
+	<h3>Results based on Film Id search</h3>
 	<c:choose>
-<c:when test="${not empty film.id}" >
-		 Film ID:
-	<c:out value="${ film.id }" />
-	<br> Title:
-	<c:out value="${film.title}" />
-	<br> Description:
-	<c:out value="${film.description}" />
-	<br> Release Year:
-	<c:out value="${film.releaseYear}" />
-	<br> Language ID:
-	<c:out value="${film.launguageId}" />
-	<br> Language:
-	<c:out value="${film.language}" />
-	<br> Rental Rate:
-	<c:out value="${film.rentalRate}" />
-	<br> Rental Duration:
-	<c:out value="${film.rentalDuration}" />
-	<br> Length:
-	<c:out value="${film.length}" />
-	<br> Replacement Cost:
-	<c:out value="${film.replacmentCost}" />
-	<br> Rating:
-	<c:out value="${film.rating}" />
-	<br> Special Features:
-	<c:out value="${film.specialFeatures}" />
-	<br> Category:
-	<c:out value="${film.category}" />
-	<br> Actors:
-	<br>
-	<ul>
-	<c:forEach items="${film.actorList}" var="actor">
-				<li>${actor.firstName } ${actor.lastName } </li>
+		<c:when test="${!empty film}">
+
+			<h3>
+				Film result using the following Id number:
+				<c:out value="${ film.id }" />
+			</h3>
+			<br>
+			<br>
+			<ul>
+				<li><strong>Title:</strong> <c:out value="${film.title}" /><br>
+					<br></li>
+
+				<li><strong>Description:</strong> <c:out value="${film.description}" /><br>
+					<br></li>
+
+				<li><strong>Release Year:</strong> <c:out value="${film.releaseYear}" /><br>
+					<br></li>
+
+				<li><strong>Language ID:</strong> <c:out value="${film.launguageId}" /><br>
+					<br></li>
+
+				<li><strong>Language:</strong> <c:out value="${film.language}" /><br> <br></li>
+
+				<li><strong>Rental Rate:</strong> <c:out value="${film.rentalRate}" /><br>
+					<br></li>
+
+				<li><strong>Rental Duration:</strong> <c:out value="${film.rentalDuration}" /><br>
+					<br></li>
+
+				<li><strong>Length:</strong> <c:out value="${film.length}" /><br> <br></li>
+
+				<li><strong>Replacement Cost:</strong> <c:out value="${film.replacmentCost}" /><br>
+					<br></li>
+
+				<li><strong>Rating:</strong> <c:out value="${film.rating}" /><br> <br></li>
+
+				<li><strong>Special Features:</strong> <c:out value="${film.specialFeatures}" /><br>
+					<br></li>
+
+				<li><strong>Category:</strong> <c:out value="${film.category}" /><br> <br></li>
+
+				<li><strong>Actors in the film:</strong> <br>
 				<br>
-	</c:forEach>
-	</ul>
 
-
-	
+					<ul>
+						<c:forEach items="${film.actorList}" var="actor">
+							<li><strong>${actor.firstName} ${actor.lastName }</strong><br></li>
+							<br>
+						</c:forEach>
+					</ul>
+			</ul>
+			
+			
+			<br>
+	<br>
 	<form action="editFilmById.do" method="GET">
- 	<button name="ID" type="submit" value="${film.id}">Edit Film</button>
- 	
- </form>
- 
- 
-	<%-- <a href="editFilm.do?Id=${film.id}"> Edit Film Id:"${film.id}"</a>
-	 --%>
-
-
+		<button name="ID" type="submit" value="${film.id}">Edit Film</button>
+	</form>
 
 	<br>
+	<br>
+
 	<form action="deleteFilm.do" method="POST">
-	<button name="id" type="submit" value="${film.id}">DELETE</button>
+		<button name="id" type="submit" value="${film.id}">DELETE</button>
 	</form>
-	</c:when>
+
+	<br>
+	<br>
+		</c:when>
+		<c:otherwise>
+
+			<p>Film not found!</p>
+		</c:otherwise>
+	</c:choose>
 	
-	
-	
-	<c:otherwise>
-	<p>Film not found or was deleted.</p>
-	</c:otherwise>
-    </c:choose>
-    
-    <a href="home.do" ><button name="home" type="submit">Home</button></a>
+	<a href="home.do"><button name="home" type="submit">Home</button></a>
 </body>
 </html>

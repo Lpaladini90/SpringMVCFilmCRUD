@@ -5,27 +5,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Result</title>
+<title>Film Keyword Results</title>
 </head>
 <body>
-	<h3>Results</h3>
+	<h3>Results based on keyword search</h3>
 
-
-<%-- 	<c:choose>
-		<c:when test="${empty searchByKeyWord.do}"> 
-			<h3>No films found</h3>
-		</c:when>
-		<c:otherwise>
-		 --%>
 			<ol>
-
 				<c:forEach var="f" items="${film}">
 					<li><a href="findFilmById.do?ID=${f.id}">${f.title} </a></li>
 				</c:forEach>
 
 			</ol>
-		<%-- </c:otherwise> --%>
-		<%-- </c:choose> --%>
+		
 		<a href="home.do" ><button name="home" type="submit">Home</button></a>
 </body>
 </html>

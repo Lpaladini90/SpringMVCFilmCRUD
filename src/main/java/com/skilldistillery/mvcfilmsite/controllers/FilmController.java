@@ -59,6 +59,7 @@ public class FilmController {
 		ModelAndView mv = new ModelAndView();
 		Film f = filmDao.findFilmById(ID);
 		mv.addObject("film", f);
+		
 		mv.setViewName("WEB-INF/result.jsp");
 		return mv;
 	}
@@ -88,6 +89,7 @@ public class FilmController {
 		ModelAndView mv = new ModelAndView();
 		Film f = filmDao.findFilmById(ID);
 		mv.addObject("film", f);
+		
 		mv.setViewName("WEB-INF/editFilm.jsp");
 		return mv;
 	}

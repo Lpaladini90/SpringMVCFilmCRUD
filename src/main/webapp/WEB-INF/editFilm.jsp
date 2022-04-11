@@ -21,7 +21,7 @@
 		 
 		<label for="title">Title:</label>
 		
-		 <input id="title" type="text" placeholder="new title" name="title"/>
+		 <input id="title" type="text" placeholder="new title" name="title" value="${film.title }"/>
 
 			 <br>
 			 <br>

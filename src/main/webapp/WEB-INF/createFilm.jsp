@@ -8,69 +8,74 @@
 <title>Created Film</title>
 </head>
 <body>
+	<h1>Add your film</h1>
+	<p> "*" indicates required fields</p>
+	<br>
+
 	<form action="createFilm.do" method="POST">
 
-		<label for="title">Title:</label>
+		<label for="title">*Title:</label>
 		 <input type="text"name="title" required>
 
 			 <br>
 			 <br>
 		<label for="description">Description:</label>
 		 <input type="text"  name="description">
-
+			
 			 <br>
 			 <br> 
-			<label for="releaseYear">Release Year:</label>
-			 <input type="text"  name="releaseYear">
-			 <br>
-			 <br>
-			 <label for="launguageId">LanguageID:</label>
-  			 <input type="text" name="launguageId" required>
+			<label for="*releaseYear">Release Year:</label>
+			 <input type="number"  name="releaseYear" min="1900" max="2099" step="1" value="2016" required>
+	
  			 
  			  <br>
 			 <br> 
-			<label for="language">Language:</label>
-			 <input type="text"  name="language" required>
+			<label for="launguageId">*Choose Language:</label>
+				<select id="launguageId" name="launguageId" required>
+				  <option value="1">1 - English</option>
+				  <option value="2">2 - Italian</option>
+				  <option value="3">3 - Japanese</option>
+				  <option value="4">4 - Mandarin</option>
+				  <option value="5">5 - French</option>
+				  <option value="6">6 - German</option>
+				</select>
 			 
 			  <br>
 			 <br>  
 			<label for="rentalRate">Rental Rate:</label>
-			 <input type="text"  name="rentalRate" required>
+			 <input type="number" step="any" name="rentalRate" value="4.99" >
 			
 			  <br>
 			 <br> 
-			<label for="rentalDuration">Rental Duration:</label>
-			 <input type="text"  name="rentalDuration" required>
+			<label for="rentalDuration">*Rental Duration:</label>
+			 <input type="number"  name="rentalDuration" value="3" min="3" required>
+			 
 			
 			  <br>
 			 <br> 
-			<label for="length">Length:</label>
-			 <input type="text"  name="length">
+			<label for="length">*Length:</label>
+			 <input type="number"  name="length" value="" required>
 			
 			  <br>
 			 <br>
 			<label for="replacmentCost">Replacement Cost:</label>
-			 <input type="text"  name="replacmentCost" required>
+			 <input type="number" step="0.01"  name="replacmentCost" value="19.99" required>
 			
 			 <br>
 			 <br>
 			<label for="rating">Rating:</label>
-			 <input type="text"  name="rating">
-			
-			 <!--  <br>
-			 <br> 
-			<label for="specialFeatures">Special Features:</label>
-			 <input type="text" name="specialFeatures"> -->
-			
+			 <input type="text"  name="rating" value="PG">
+
 			  
 			<label for="category">Category:</label>
-			 <input type="text"  name="category" required>
+			 <input type="text"  name="category" value="Action">
 			  <br>
 			 <br>
 			 <input type="submit"/>
 
 	</form>
-
-<a href="home.do" ><button name="home" type="submit">Home</button></a>
+	
+	<br>
+	<a href="home.do" ><button name="home" type="submit">Home</button></a>
 </body>
 </html>
