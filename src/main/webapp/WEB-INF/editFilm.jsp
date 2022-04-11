@@ -17,7 +17,7 @@
 	
 	<form action="editFilm.do" method="POST">
 	
-		 <input id="ID" type="number" name="ID" value="${film.id}"/>
+		 <input id="ID" type="hidden" name="ID" value="${film.id}"/>
 		 
 		<label for="title">Title:</label>
 		
