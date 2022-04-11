@@ -16,7 +16,7 @@
 
 
  	Keyword:
- 	<input type="text" name="keyword"/>
+ 	<input type="text" name="keyword" required/>
  	<input type="submit" value="Search" />
  </form>
 	
