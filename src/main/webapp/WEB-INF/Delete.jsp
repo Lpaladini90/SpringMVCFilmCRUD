@@ -8,8 +8,16 @@
 <title>Result</title>
 </head>
 <body>
+	<c:choose>
+	<c:when test="${empty film }">
+	<h1>Film could not be deleted</h1>
+	<h3>Only films that you added can be deleted</h3>
+	</c:when>
+	<c:otherwise>
 	
 	<h1>Film was deleted</h1>
+	</c:otherwise>
+	</c:choose>
 	<a href="home.do" ><button name="home" type="submit">Home</button></a>
 	
 </body>

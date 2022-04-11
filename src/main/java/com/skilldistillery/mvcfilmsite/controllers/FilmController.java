@@ -108,7 +108,12 @@ public class FilmController {
 	@RequestMapping(path = "deleteFilm.do", method = RequestMethod.POST)
 	public ModelAndView deleteFilm(Film film) {
 		ModelAndView mv = new ModelAndView();
-		filmDao.deleteFilm(film);	
+		if (film.getId() <= 1000) {
+			film = null;
+		} else {
+			filmDao.deleteFilm(film);	
+		}
+		mv.addObject("film", film);
 		mv.setViewName("WEB-INF/Delete.jsp");
 		return mv;
 
