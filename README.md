@@ -20,7 +20,7 @@ The Id search returns all the details of a film that match the user search. If n
 
         - dfjgh
 - Austin Breckenfelder
-          - Test
+          - This project really clarified controllers for me. Before this project I was quite lost on how to even set up a controller but now the setup and use it much clearer. Controllers allow you to pull information from forms by request mapping to form actions, and allow injection of information into your JSP adding objects to the model and view and referring to those objects in the JSP. We ran into some issues with getting the controllers to properly pull the information that we needed, but this was cleared up once we realized the relationship with input names and parameter values in the request mapping. This was also a first time with working on a team all working off the same git repo. This really shined a light on using git to collaborate with others and the workflow of having multiple people working on various parts of an application. We ran into a couple issues of editing the same code at first, but once we had a couple of hiccups we all had really good communication on what we planned to work on and avoided any overwrites.
 
 - Zachary Breitnauer
           - Things I learned on this project was communication. Talking to the team and deciding what part of the project we should work on to avoid overwriting each others code. Using git pull/push can lead to accidental merge conflict mistakes. Linking controllers, DAO, and jsps was a challenge in making the app work. Using the web dev tools and doing sysout to debug and learning to read error messages was useful in completing this project. Overall really enjoyed working with a team.
