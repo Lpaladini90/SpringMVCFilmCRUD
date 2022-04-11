@@ -37,9 +37,25 @@ The Id search returns all the details of a film that match the user search. If n
 
 - Lucas Paladini
 
-        - I will start by saying I wish I had more time on this project. There was a lot to do even with three people on a team. With more time I feel
-          as though this project styling wise could have really come together. This really wasn't that difficult when it came the Java code side of things.
-          However this project opened my eyes to the front end and how to connect that back end to it. I was having a lot of difficulty remember all that could be done in a HTML file regarding forms, if/else logic etc. This greatly helped but I will need to continue learning that to get a full grasp of the concepts. I was extremely happy( as frustrating as it was at the time ) to be able to get a better understanding of errors, how to read them and what was needed to fix them. From git errors to connection errors to simple spelling errors, everything added up. But it seemed if we took them time, as a group, we could track them down and correct them. I have had a lot of trouble when it comes to trying to read and fix exceptions and errors, I feel much more confident in that department now. This project also helped me get a better understanding for the paths that are taken, from a user being on the internet, to get and pushing information and more. The controllers make more sense after a group project like this, which I am really happy about. Spring has been fun to use, seems to me like it is just an upgraded form of eclipse which I liked very much. A group project like this really has no limits it seems, and the more I work with the code the more I can see the potential of what an application like this could turn in. I hope I will become better at styling the front end. It seems like a great idea to make all the hard work that was  used on the back end to shine on the front in an appealing way. I look forward to more group projects in the future!ß
+        - I will start by saying I wish I had more time on this project.
+          There was a lot to do even with three people on a team. With more time I feel
+          as though this project styling wise could have really come together.
+          This really wasn't that difficult when it came the Java code side of things.
+          However this project opened my eyes to the front end and how to connect that back end to it.
+          I was having a lot of difficulty remember all that could be done in a HTML file regarding forms, if/else logic etc.
+          This greatly helped but I will need to continue learning that to get a full grasp of the concepts.
+          I was extremely happy( as frustrating as it was at the time ) to be able to get a better understanding of errors,
+          how to read them and what was needed to fix them. From git errors to connection errors to simple spelling errors,
+          everything added up. But it seemed if we took them time, as a group, we could track them down and correct them.
+          I have had a lot of trouble when it comes to trying to read and fix exceptions and errors,
+          I feel much more confident in that department now. This project also helped me get a better understanding for
+           the paths that are taken, from a user being on the internet, to get and pushing information and more.
+           The controllers make more sense after a group project like this, which I am really happy about.
+           Spring has been fun to use, seems to me like it is just an upgraded form of eclipse which I liked very much.
+           A group project like this really has no limits it seems, and the more I work with the code the more
+           I can see the potential of what an application like this could turn in. I hope I will become better at styling the front end.
+           It seems like a great idea to make all the hard work that was  used on the back end to shine on the front in an appealing way.
+           I look forward to more group projects in the future!
 
 
 - Austin Breckenfelder
